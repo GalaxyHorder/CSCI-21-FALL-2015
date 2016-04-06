@@ -1,7 +1,7 @@
 /*
  * Name        : lab_1.cpp
- * Author      : FILL IN
- * Date        : FILL IN
+ * Author      : Xavier Winsor
+ * Date        : 02/08/2016
  * Description : Our First Lab of the Semester!
  */
 #include <iostream>
