@@ -18,7 +18,6 @@ void SLList::InsertHead(int number){
     new_node -> set_next_node(head_);
     head_ = new_node;
     size_++;
-    
 }
 
 void SLList::RemoveHead(){

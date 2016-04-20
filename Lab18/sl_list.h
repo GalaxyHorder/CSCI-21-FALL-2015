@@ -16,7 +16,7 @@ using namespace std;
 class SLList{
   
   private:
-  SLNode *head_;
+  SLNode *head_, ;
   unsigned int size_;
   
   public: 
