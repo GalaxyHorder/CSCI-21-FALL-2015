@@ -13,16 +13,13 @@ int* MakeDynoIntArray(unsigned int size){
 }
 
 int Sum(int* the_array, unsigned int array_size){
-    int* final;
-    
-    for(int i = 0; i<=array_size; i++){
-
-        final = final + the_array[i];
+    int final=0;
+    for(int i = 0; i <= array_size; i++){
+        int number = the_array[i];
+        final = final + number;
 
     }
-    int the_final = *final;
-    return the_final;
-
+    return final;
 }
 
 int Max(int* the_array, unsigned int array_size){
