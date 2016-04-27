@@ -1,6 +1,6 @@
 
-#ifndef LAB_H
-#define LAB_H
+#ifndef LABSS_H
+#define LABSS_H
 #include <string>
 #include <iostream>
 #include <cstdlib>
@@ -18,10 +18,12 @@ class Item{
   string name_;
   int value_;
   public:
-  void setValues(string name = "item", int value = 0);
+  Item(string name = "item", int value = 0);
   ~Item();
-  string getName();
-  int getValue();
+  void set_name(string);
+  void set_value(int);
+  string name();
+  int value();
   string ToString();
     
 };

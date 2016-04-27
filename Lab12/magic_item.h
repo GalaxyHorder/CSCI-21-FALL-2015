@@ -19,16 +19,17 @@ class MagicItem{
   int mana_required_, value_;
   
   public:
-  void Constructor(string name = "magicitem", int value = 0, string description = "no description", int mana_required = 0);
+  MagicItem(string name = "magicitem", int value = 0, string description = "no description", int mana_required = 0);
+  //MagicItem(string, int, string, int);
   ~MagicItem();
-  void setDescription(string description);
-  void setName(string name);
-  void setMana(int mana);
-  void setValue(int value);
-  string getName()const;
-  int getMana()const;
-  int getValue()const;
-  string getDescription()const;
+  void set_description(string);
+  void set_name(string);
+  void set_mana_required(int);
+  void set_value(int);
+  string name()const;
+  int mana_required()const;
+  int value()const;
+  string description()const;
   string ToString();
   
 };

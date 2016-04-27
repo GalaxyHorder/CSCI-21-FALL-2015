@@ -1,5 +1,6 @@
-#ifndef LAB_H
-#define LAB_H
+#ifndef LABS_H
+#define LABS_H
+
 #include <string>
 #include <iostream>
 #include <cstdlib>
@@ -20,18 +21,18 @@ class FoodItem{
     double units_;
     
     public:
-    void Constructor(string name = "fooditem", int value = 0, int calories = 0, string unit_of_measure = "nounits", double units = 0.0);
+    FoodItem(string name = "fooditem", int value = 0, int calories = 0, string unit_of_measure = "nounits", double units = 0.0);
     ~FoodItem();
-    string getName();
-    int getValue();
-    int getCalories();
-    double getUnits();
-    string getUnitMeasure();
-    void setName(string new_name);
-    void setValue(int new_number);
-    void setCalories(int calories);
-    void setUnitOfMeasure(string unit_measure);
-    void setUnits(double new_units);
+    string name();
+    int value();
+    int calories();
+    double units();
+    string unit_of_measure();
+    void set_name(string new_name);
+    void set_value(int new_number);
+    void set_calories(int calories);
+    void set_unit_of_measure(string unit_measure);
+    void set_units(double new_units);
     string ToString();
     
 };

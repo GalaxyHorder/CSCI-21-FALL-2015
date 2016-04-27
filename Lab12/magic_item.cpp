@@ -1,54 +1,54 @@
 
 #include "magic_item.h"
 
-void MagicItem::Constructor(string name, int value, string description, int mana_required){
+MagicItem::MagicItem(string name, int value, string description, int mana_required){
     name_=name;
     value_=value;
-    string description_=description;
-    int mana_required_=mana_required;
+    description_=description;
+    mana_required_=mana_required;
 }
 
 MagicItem::~MagicItem(){
 }
 
-void MagicItem::setName(string name){
+void MagicItem::set_name(string name){
     name_=name;
 }
 
-void MagicItem::setValue(int value){
+void MagicItem::set_value(int value){
     value_=value;
 }
 
-void MagicItem::setDescription(string description){
+void MagicItem::set_description(string description){
     description_=description;
 }
 
-void MagicItem::setMana(int mana){
+void MagicItem::set_mana_required(int mana){
     mana_required_=mana;
 }
 
-string MagicItem::getName()const{
+string MagicItem::name()const{
     return name_;
 }
 
-int MagicItem::getValue()const{
+int MagicItem::value()const{
     return value_;
 }
 
-string MagicItem::getDescription()const{
+string MagicItem::description()const{
     return description_;
 }
 
-int MagicItem::getMana()const{
+int MagicItem::mana_required()const{
     return mana_required_;
 }
 
 string MagicItem::ToString(){
-    stringstream mana, value;
-    int manas=getMana(), values=getValue();
-    string description=getDescription(), name=getName();
+    stringstream mana, values;
+    int manas=mana_required(), the_values=value();
+    string descriptions=description(), names=name();
     mana<<manas;
-    value<<values;
-    string final = name+ ",$" + value.str() + ", " + description + ", requires " + mana.str() + " mana";
+    values<<the_values;
+    string final = names+ ", $" + values.str() + ", " + description() + ", requires " + mana.str() + " mana";
     return final;
 }
