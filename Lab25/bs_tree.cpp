@@ -52,51 +52,51 @@ string BSTree::InOrder(BSTNode*& root){
 bool BSTree::Remove(int number, BSTNode*& root){
     BSTNode* left;
     BSTNode* right;
-    if(root!=NULL){
+    if(root!=NULL){//only defigns if root is not null to avoid segmentation
         left = root -> left_child();
         right = root -> right_child();
     }
-    if(root==NULL){
+    if(root==NULL){//checks if root is null, if yes return false
         return false;
-    }else if(root -> contents() == number){
-        if(root->right_child()!=NULL){
+    }else if(root -> contents() == number){//checks if the content is equal to the incomeing number
+        if(root->right_child()!=NULL){//if right child is not null looks through for the smallest number on the right side then deletes 
             int new_content = FindMin(right);
-            bool temp = Remove(new_content, root->right_child());
+            bool temp = Remove(new_content, root->right_child());//deletes the node that is being moved
             root -> set_contents(new_content);
             return true;
-        }else if(root -> left_child() != NULL){
+        }else if(root -> left_child() != NULL){//moves up the right child and it's subree 
             BSTNode* temp1 = root;
             root = root -> left_child();
             bool temp = Remove(temp1 -> contents(), root);
             size_--;
             return true;
-        }else{
+        }else{//base case that removes the node
             root = NULL;
             delete root;
             size_--;
             return true;
         }
         //return true;
-    }else if(left != NULL && left -> contents() >= number){
+    }else if(left != NULL && left -> contents() >= number){//goes down the left child if it's contents are bigger that number
         return Remove(number, root->left_child());
-    }else if(right != NULL && right -> contents() <= number){
+    }else if(right != NULL && right -> contents() <= number){//goes down the right child when it's contents are smaller than the number
         return Remove(number, root->right_child());
     }else{
-        if(left != NULL){
+        if(left != NULL){//if neither above fit, forces the search down the left child if it's not null
             return Remove(number, root->left_child());
-        }else if(right != NULL){
+        }else if(right != NULL){// same as above but goes down the right child and only if it's not null
             return Remove(number, root->right_child());
-        }else{
+        }else{//if both are null just return null because the number is not in the tree
             return false;
         }
     }
 }
 
 int BSTree::FindMin(BSTNode*& root){
-    if(root!=NULL){
-        if(root->left_child()!=NULL){
+    if(root!=NULL){//if null return 0
+        if(root->left_child()!=NULL){//uses recursion through the left child
             return FindMin(root->left_child());
-        }else{
+        }else{//returns the contents of the root
             int out = root -> contents();
             return out;
         }
