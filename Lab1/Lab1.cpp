@@ -53,7 +53,7 @@ void FirstLab() {
     cout<<"Your name is "<<first_name<<"!"<<endl;
     // (6) Display the message "Nice to meet you, NAME" where NAME is replaced
     //     with the value of first_name
-    cout<<"Nice to meet you, "<<first_name<<"!";
+    cout<<"Nice to meet you, "<<first_name<<"!"<<endl;
     // (7) Ask the user if they have programmed before. Make sure you inform them
     //     that you want the answer as a single character (y/n)
     cout<<"Have you programed before? Answer Y for yes and N for no(caps are inportant!)"<<endl;
@@ -62,7 +62,7 @@ void FirstLab() {
     cin>>programmed_before;
     // (9): Call the function checkExperience appropriately so that the message will display
     string response=checkExperience(programmed_before);
-    cout<<response;
+    cout<<response<<endl;
 }
 
 
