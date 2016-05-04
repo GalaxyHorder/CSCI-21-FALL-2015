@@ -20,8 +20,7 @@ using std::endl;
 using std::string;
 
 // Function Prototypes (DO NOT ALTER)
-void MakeChange(int initial_value, int &quarters, int &dimes, int &nickels,
-                int &pennies);
+void MakeChange(int initial_value, int &quarters, int &dimes, int &nickels, int &pennies);
 double LaunchHumanCannonball(double initial_velocity, double launch_angle);
 
 // Create a Constant named kPI which is initialized to 3.1415927
