@@ -75,41 +75,41 @@ int RockScissorPaper(char player_one, char player_two) {
   // YOU MUST USE A SWITCH IN THIS FUNCTION
   int out;
     switch (player_one){
-        case "r":
+        case 'r':
         switch(player_two){
-            case "r":
+            case 'r':
             out = 3;
             break;
-            case "p":
+            case 'p':
             out = 1;
             break;
-            case "s":
+            case 's':
             out = 2;
             break;
         }
         break;
-        case "p":
+        case 'p':
         switch(player_two){
-            case "r":
+            case 'r':
             out = 1;
             break;
-            case "p":
+            case 'p':
             out = 3;
             break;
-            case "s":
+            case 's':
             out = 2;
             break;
         }
         break;
-        case "s":
+        case 's':
         switch(player_two){
-            case "r":
+            case 'r':
             out = 2;
             break;
-            case "p":
+            case 'p':
             out = 1;
             break;
-            case "s":
+            case 's':
             out = 3;
             break;
         }
@@ -129,8 +129,8 @@ int RockScissorPaper(char player_one, char player_two) {
  */
 string ToLower(string input) {
     string out;
-    for(i=0; input[i] != input.size(); i++){
-        out[i] = tolower(input[i])
+    for(int i=0; input[i] != input.size(); i++){
+        out[i] = tolower(input[i]);
     }
     return out;
   // CODE HERE
@@ -142,37 +142,39 @@ string ToLower(string input) {
  * @return string - a string containing the converted input string
  */
 string ToUpper(string input) {
-    tring out;
-    for(i=0; input[i] != input.size(); i++){
-        out[i] = toupper(input[i])
+    string out;
+    for(int i=0; input[i] != input.size(); i++){
+        out[i] = toupper(input[i]);
     }
     return out;
   // CODE HERE
 }
 
-// int main(int argc, const char * argv[]) {
-//     int number, end;
-//     string input, input2;
-//     char play1, play2
-//     while (end != 2){
-//         cout<<"What object for goldilocks?"<<endl;
-//         cin>>input;
-//         cout<<"What number?"<<endl;
-//         cin>>number;
-//         string fixed = ToLower(input);
-//         string goldilocks = Goldilocks(fixed, number);
-//         cout<<goldilocks<<"\n" << "go again? 1. yes 2. no" << endl;
-//         cin>>end;
-//     }
-//     end = 0;
-//     while (end != 2){
-//         cout<<"now lets play rock paper scissor! input r for rock, p for paper, or s for scissor"<<endl;
-//         cin>>play1;
-//         cout<<"now input for player 2"<<endl;
-//         cint>>play2;
-//         int output = RockScissorPaper(play1, play2);
-//         cout<<output<<endl;
+int main(int argc, const char * argv[]) {
+    int number, end;
+    string input, input2;
+    char rock1, rock2;
+    while (end != 2){
+        cout<<"What object for goldilocks?"<<endl;
+        cin>>input;
+        cout<<"What number?"<<endl;
+        cin>>number;
+        string fixed = ToLower(input);
+        string goldilocks = Goldilocks(fixed, number);
+        cout<<goldilocks<<"\n" << "go again? 1. yes 2. no" << endl;
+        cin>>end;
+    }
+    end = 0;
+    while (end != 2){
+        cout<<"now lets play rock paper scissor! input R for rock, P for paper, or S for scissor"<<endl;
+        cin>>rock1;
+        cout<<"now input for player 2"<<endl;
+        cin>>rock2;
+        int output = RockScissorPaper(rock1, rock2);
+        cout<<output<<endl;
+        cout<<"play again? 1. yes, 2. no"<<endl;
+        cin>>end;
         
-//     }
-//     return 0;
-// }
+    }
+    return 0;
+}
