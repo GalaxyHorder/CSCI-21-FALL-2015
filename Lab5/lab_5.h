@@ -1,6 +1,6 @@
 /*
  * Name        : lab_5.h
- * Author      : FILL IN
+ * Author      : Xavier Winsor
  * Description : Practicing Functions. Use this file to write your
  *               Function Prototypes (what goes above main()).
  */
@@ -16,6 +16,7 @@ using std::cin;
 using std::cout;
 using std::endl;
 using std::string;
+using namespace std;
 
 /*
  * Function Name: Hello
@@ -31,7 +32,7 @@ void Hello();
  * @param const string& - The string to display to stdout
  */
 // CODE HERE (FUNCTION PROTOTYPE)
-void Printout();
+void PrintMessage(string);
 /*
  * Function Name: GetAnswer
  *
@@ -39,7 +40,7 @@ void Printout();
  * @return int - The value 42
  */
 // CODE HERE (FUNCTION PROTOTYPE)
-GetAnswer();
+int GetAnswer();
 /*
  * Function Name: FindLarger
  *
@@ -65,5 +66,5 @@ int FindLarger(int first_value, int second_value);
  *             - Defaults to false
  */
 // CODE HERE (FUNCTION PROTOTYPE)
-string BuildMessage();
+string BuildMessage(string message = "empty", bool true_false = false);
 #endif
