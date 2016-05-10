@@ -48,8 +48,7 @@ double LaunchHumanCannonball(double initial_velocity, double launch_angle) {
   // (1) Convert launch_angle from degrees to radians
   //     [radian_angle = launch_angle * (kPI/180)]
   // CODE HERE
-    double pi = 3.14;
-    double radian_angle = launch_angle * (pi/180);
+    double radian_angle = launch_angle * (kPI/180);
   // (2) Compute final horizontal/x velocity
   //     [x_velocity = initial_velocity * cos(radian_angle)]
   // CODE HERE
@@ -61,19 +60,19 @@ double LaunchHumanCannonball(double initial_velocity, double launch_angle) {
   // (4) Compute time of flight
   //     [flight_time = (y_velocity) * 2 / -9.8]
   // CODE HERE
-    double flight_time = (y_velocity) * 2 / -9.8;
+    double flight_time = y_velocity * 2 / -9.8;
   // (5) Compute horizontal/x distance traveled
   //     [x_distance = x_velocity * flight_time]
   // CODE HERE
     double x_distance = x_velocity * flight_time;
   // (6) Return horizontal/x distance
   // CODE HERE
-  return y_velocity/x_distance;
+  return x_distance;
 }
 
 int main(int argc, const char * argv[]) {
     int money, quarters=0, nickels=0, pennies=0, dimes=0;
-    double initial_velocity, launch_angle;
+    double initial_velocity=0, launch_angle=0;
     cout<<"How many dollars do you want me to make into change?"<<endl;
     cin>>money;
     MakeChange(money, quarters, dimes, nickels, pennies);
@@ -82,7 +81,8 @@ int main(int argc, const char * argv[]) {
     cin>>initial_velocity;
     cout<<"Input the launch angle."<<endl;
     cin>>launch_angle;
-    cout<<"The result is " << LaunchHumanCannonball(initial_velocity, launch_angle)<<endl;
+    double out = LaunchHumanCannonball(initial_velocity, launch_angle);
+    cout<<"The result is " <<out<<endl;
     
     return 0;
 }

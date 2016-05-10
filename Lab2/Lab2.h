@@ -1,6 +1,6 @@
 /*
  * Name        : lab_2.h
- * Author      : FILL IN
+ * Author      : Xavier Winsor
  * Description : Using Arithmetic to finish the functions MakeChange() and
  *               LaunchHumanCannonball()
  * Sources     :
@@ -24,6 +24,7 @@ void MakeChange(int initial_value, int &quarters, int &dimes, int &nickels, int 
 double LaunchHumanCannonball(double initial_velocity, double launch_angle);
 
 // Create a Constant named kPI which is initialized to 3.1415927
+double kPI = 3.1415927;
 // CODE HERE
 
 #endif
