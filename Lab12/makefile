@@ -1,15 +1,6 @@
-allOfIt:	item.o lab_12_unit_test.o food_item.o magic_item.o
-	g++ -Wall -g -o Items item.o food_item.o magic_item.o lab_12_unit_test.o
+AllofIt:  lab_13_unit_test.o
+	g++ -Wall -g -o Lab13 lab_13_unit_test.o
 	
-lab12unittest:	lab_12_unit_test.cpp
-	g++ -Wall -g -c lab_12_unit_test.cpp
-	
-Items:	item.cpp
-	g++ -Wall -g -c item.cpp
-	
-Food:	food_item.cpp
-	g++ -Wall -g -c food_item.cpp
-	
-Magic:	magic_item.cpp
-	g++ -Wall -g -c magic_item.cpp
+lab13unittest:lab_13_unit_test.cpp
+	g++ -Wall -g -c lab_13_unit_test.cpp
 	
