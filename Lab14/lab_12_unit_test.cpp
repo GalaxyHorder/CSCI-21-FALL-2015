@@ -39,7 +39,7 @@ TEST_CASE("Sum Array Values") {
     CHECK(Sum(my_array, my_array_size) == 60);
   }
 }
-/*
+
 TEST_CASE("Max Value in Array") {
   int* my_array = MakeDynoIntArray(3);
   unsigned int my_array_size = 3;
@@ -121,5 +121,5 @@ TEST_CASE("Testing Exception Handling") {
     }
   }
 }
-*/
+
 
